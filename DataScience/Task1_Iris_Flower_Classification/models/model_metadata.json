@@ -1,0 +1,92 @@
+{
+  "model_name": "Logistic Regression",
+  "features": [
+    "sepal_length",
+    "sepal_width",
+    "petal_length",
+    "petal_width"
+  ],
+  "target": "species",
+  "label_mapping": {
+    "setosa": 0,
+    "versicolor": 1,
+    "virginica": 2
+  },
+  "inverse_label_mapping": {
+    "0": "setosa",
+    "1": "versicolor",
+    "2": "virginica"
+  },
+  "cv_results": {
+    "Logistic Regression": {
+      "mean_cv_accuracy": 0.9583333333333334,
+      "std_cv_accuracy": 0.026352313834736508,
+      "fold_scores": [
+        0.9583333333333334,
+        1.0,
+        0.9583333333333334,
+        0.9583333333333334,
+        0.9166666666666666
+      ]
+    },
+    "K-Nearest Neighbors": {
+      "mean_cv_accuracy": 0.9583333333333334,
+      "std_cv_accuracy": 0.026352313834736508,
+      "fold_scores": [
+        0.9583333333333334,
+        1.0,
+        0.9583333333333334,
+        0.9166666666666666,
+        0.9583333333333334
+      ]
+    },
+    "Decision Tree": {
+      "mean_cv_accuracy": 0.95,
+      "std_cv_accuracy": 0.016666666666666698,
+      "fold_scores": [
+        0.9583333333333334,
+        0.9583333333333334,
+        0.9583333333333334,
+        0.9583333333333334,
+        0.9166666666666666
+      ]
+    },
+    "Random Forest": {
+      "mean_cv_accuracy": 0.95,
+      "std_cv_accuracy": 0.0311804782231162,
+      "fold_scores": [
+        0.9583333333333334,
+        1.0,
+        0.9583333333333334,
+        0.9166666666666666,
+        0.9166666666666666
+      ]
+    }
+  },
+  "test_metrics": {
+    "test_accuracy": 0.9333333333333333,
+    "precision_macro": 0.9333333333333332,
+    "recall_macro": 0.9333333333333332,
+    "f1_macro": 0.9333333333333332,
+    "precision_weighted": 0.9333333333333333,
+    "recall_weighted": 0.9333333333333333,
+    "f1_weighted": 0.9333333333333333,
+    "confusion_matrix": [
+      [
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        0,
+        1,
+        9
+      ]
+    ]
+  }
+}
