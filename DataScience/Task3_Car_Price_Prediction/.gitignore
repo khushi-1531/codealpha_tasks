@@ -1,0 +1,33 @@
+# Python bytecode & cache
+__pycache__/
+*.pyc
+*.py[cod]
+*$py.class
+
+# Pytest & testing artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment files
+.env
+*.env
+
+# IDE & Editor configuration
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints & temp files
+.ipynb_checkpoints/
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db

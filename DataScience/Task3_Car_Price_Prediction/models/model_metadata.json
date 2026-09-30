@@ -1,0 +1,165 @@
+{
+  "model_name": "Random Forest (Raw-Target)",
+  "base_algorithm": "Random Forest",
+  "target_variable": "price",
+  "log_target_transformed": false,
+  "training_records": 164,
+  "test_records": 41,
+  "random_state": 42,
+  "features_used": {
+    "numerical_features": [
+      "symboling",
+      "doornumber",
+      "wheelbase",
+      "carlength",
+      "carwidth",
+      "carheight",
+      "curbweight",
+      "cylindernumber",
+      "enginesize",
+      "boreratio",
+      "stroke",
+      "compressionratio",
+      "horsepower",
+      "peakrpm",
+      "citympg",
+      "highwaympg",
+      "power_to_weight",
+      "engine_power_ratio",
+      "average_mpg"
+    ],
+    "categorical_features": [
+      "brand",
+      "fueltype",
+      "aspiration",
+      "carbody",
+      "drivewheel",
+      "enginelocation",
+      "enginetype",
+      "fuelsystem"
+    ],
+    "total_feature_count": 27
+  },
+  "excluded_features": [
+    "car_ID",
+    "CarName",
+    "price",
+    "log_price"
+  ],
+  "cross_validation_evaluation": {
+    "cv_splits": 5,
+    "cv_r2_mean": 0.8916531423623641,
+    "cv_r2_std": 0.016576798900082904,
+    "cv_mae_mean": 1682.3414798205267,
+    "cv_mae_std": 283.3923418681081,
+    "cv_rmse_mean": 2501.0821867537775,
+    "cv_rmse_std": 378.76551311123393
+  },
+  "test_set_evaluation": {
+    "test_r2": 0.9582447567359104,
+    "test_mae": 1279.445093495935,
+    "test_rmse": 1815.5789148575943
+  },
+  "all_models_summary": [
+    {
+      "Model": "Linear Regression (Raw-Target)",
+      "Target Type": "Raw Price",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.9288 \u00b1 0.0145",
+      "CV MAE ($)": "$1,471.30 \u00b1 $173.51",
+      "CV RMSE ($)": "$2,006.22 \u00b1 $263.12",
+      "Test R\u00b2": 0.8945491125630377,
+      "Test MAE ($)": 1872.5965121025404,
+      "Test RMSE ($)": 2885.2585775978523
+    },
+    {
+      "Model": "Ridge Regression (Raw-Target)",
+      "Target Type": "Raw Price",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.8911 \u00b1 0.0414",
+      "CV MAE ($)": "$1,681.35 \u00b1 $231.13",
+      "CV RMSE ($)": "$2,452.75 \u00b1 $509.77",
+      "Test R\u00b2": 0.8981184466316702,
+      "Test MAE ($)": 1957.0159966417364,
+      "Test RMSE ($)": 2836.007665074512
+    },
+    {
+      "Model": "Random Forest (Raw-Target)",
+      "Target Type": "Raw Price",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.8917 \u00b1 0.0166",
+      "CV MAE ($)": "$1,682.34 \u00b1 $283.39",
+      "CV RMSE ($)": "$2,501.08 \u00b1 $378.77",
+      "Test R\u00b2": 0.9582447567359104,
+      "Test MAE ($)": 1279.445093495935,
+      "Test RMSE ($)": 1815.5789148575943
+    },
+    {
+      "Model": "Gradient Boosting (Raw-Target)",
+      "Target Type": "Raw Price",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.8847 \u00b1 0.0204",
+      "CV MAE ($)": "$1,744.54 \u00b1 $239.25",
+      "CV RMSE ($)": "$2,582.01 \u00b1 $436.46",
+      "Test R\u00b2": 0.9355788839013004,
+      "Test MAE ($)": 1600.0249818839377,
+      "Test RMSE ($)": 2255.141222714576
+    },
+    {
+      "Model": "Extra Trees (Raw-Target)",
+      "Target Type": "Raw Price",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.9007 \u00b1 0.0207",
+      "CV MAE ($)": "$1,642.36 \u00b1 $237.71",
+      "CV RMSE ($)": "$2,383.99 \u00b1 $380.61",
+      "Test R\u00b2": 0.93569570499687,
+      "Test MAE ($)": 1421.3373902439025,
+      "Test RMSE ($)": 2253.095561084517
+    },
+    {
+      "Model": "Linear Regression (Log-Target)",
+      "Target Type": "Log(Price)",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.8606 \u00b1 0.0394",
+      "CV MAE ($)": "$1,763.93 \u00b1 $263.27",
+      "CV RMSE ($)": "$2,825.55 \u00b1 $595.07",
+      "Test R\u00b2": 0.7836360711693545,
+      "Test MAE ($)": 1978.46362000847,
+      "Test RMSE ($)": 4132.872913024455
+    },
+    {
+      "Model": "Ridge Regression (Log-Target)",
+      "Target Type": "Log(Price)",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.8386 \u00b1 0.0982",
+      "CV MAE ($)": "$1,674.17 \u00b1 $250.35",
+      "CV RMSE ($)": "$2,977.66 \u00b1 $1,012.65",
+      "Test R\u00b2": 0.9322105690694148,
+      "Test MAE ($)": 1576.8745765814137,
+      "Test RMSE ($)": 2313.346115652439
+    },
+    {
+      "Model": "Random Forest (Log-Target)",
+      "Target Type": "Log(Price)",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.8867 \u00b1 0.0209",
+      "CV MAE ($)": "$1,695.90 \u00b1 $317.30",
+      "CV RMSE ($)": "$2,560.01 \u00b1 $443.32",
+      "Test R\u00b2": 0.9558899070524753,
+      "Test MAE ($)": 1329.3735940985034,
+      "Test RMSE ($)": 1866.0729081825905
+    },
+    {
+      "Model": "Gradient Boosting (Log-Target)",
+      "Target Type": "Log(Price)",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.8937 \u00b1 0.0169",
+      "CV MAE ($)": "$1,644.89 \u00b1 $211.21",
+      "CV RMSE ($)": "$2,468.82 \u00b1 $331.16",
+      "Test R\u00b2": 0.9360430421139015,
+      "Test MAE ($)": 1603.1479668933362,
+      "Test RMSE ($)": 2247.002318369864
+    },
+    {
+      "Model": "Extra Trees (Log-Target)",
+      "Target Type": "Log(Price)",
+      "CV R\u00b2 (Mean \u00b1 Std)": "0.8973 \u00b1 0.0180",
+      "CV MAE ($)": "$1,620.13 \u00b1 $225.20",
+      "CV RMSE ($)": "$2,428.89 \u00b1 $353.93",
+      "Test R\u00b2": 0.9251944921601202,
+      "Test MAE ($)": 1516.0475882230626,
+      "Test RMSE ($)": 2430.1126666936393
+    }
+  ]
+}
